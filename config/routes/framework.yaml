@@ -1,3 +1,13 @@
+controllers:
+    resource: ../../src/Controller/
+    type: attribute
+
+api_login:
+    path: /api/login
+    methods: [POST]
+    defaults:
+        _controller: Lexik\Bundle\JWTAuthenticationBundle\Controller\AuthenticationController::authenticate
+
 when@dev:
     _errors:
         resource: '@FrameworkBundle/Resources/config/routing/errors.php'
